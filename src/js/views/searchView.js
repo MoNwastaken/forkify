@@ -10,6 +10,17 @@ export const clearResults = () => {
     elements.searchResList.innerHTML = '';
 };
 
+const limitRecipeTitle = (title, limit = 17) => {
+    if (title.length > limit) {
+        title.split(' ').reduce((acc, cur) => {
+            if (acc + cur.length <= limit) {
+
+            }
+        }, 0);
+    }
+    return title;
+};
+
 const renderRecipe = recipe => {
     const markup = `<li>
                     <a class="results__link" href="#${recipe.recipe_id}">
